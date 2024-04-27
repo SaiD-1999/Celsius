@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/SaiD-1999/Celsius/issues"
   },
-  "homepage": "https://github.com/SaiD-1999/Celsius#readme"
+  "homepage": "https://github.com/SaiD-1999/Celsius#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
