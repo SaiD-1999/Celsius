@@ -1,0 +1,25 @@
+{
+  "name": "celsius",
+  "version": "1.0.0",
+  "description": "aula",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaiD-1999/Celsius.git"
+  },
+  "keywords": [
+    "node",
+    "http"
+  ],
+  "author": "Hugo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaiD-1999/Celsius/issues"
+  },
+  "homepage": "https://github.com/SaiD-1999/Celsius#readme"
+}
