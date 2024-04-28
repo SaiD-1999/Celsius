@@ -41,6 +41,10 @@ function enviarDinheiro(requisicao, resposta){
 };
 function converterCelsius(requisicao, resposta){
     let grauCelsius = requisicao.query.grausCelsius;
+    let sequencia = requisicao.query.sequencia;
+    if(!sequencia){
+        sequencia = 1;
+    }
     resposta.write('<!DOCTYPE html>');
     resposta.write('<html>');
     resposta.write('<head>');
@@ -49,8 +53,13 @@ function converterCelsius(requisicao, resposta){
     resposta.write('</head>');
     resposta.write('<body>');
     if(grauCelsius){
-        const resultado = (grauCelsius * (9/5)) + 32;
-        resposta.write('<h1>' + grauCelsius + ' graus celsius = ' + resultado + 'graus em farenheit</h1>');
+        for(let i = 0; i < sequencia; i++){
+            sequencia = parseInt(sequencia);
+            grauCelsius = parseInt(grauCelsius);
+            const resultado = (grauCelsius * (9/5)) + 32;
+            resposta.write('<h1>' + grauCelsius + ' graus celsius = ' + resultado + 'graus em farenheit</h1>');
+            grauCelsius += 1;
+        }
     }
     else{
         resposta.write('<h1>Informe o parâmetro graus celsius na url: http://localhost:3000/conversor?grausCelsius=0</h1>');
